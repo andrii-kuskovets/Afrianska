@@ -1,0 +1,16 @@
+.button {
+    display: block;
+    margin: 0 auto;
+    max-width: 220px;
+    background: $light-blue;
+    box-shadow: 5px 10px 20px rgba($blue, 0.2);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 15px 48px;
+    text-align: center;
+    font-weight: 300;
+    color: $white;
+    text-transform: capitalize;
+}

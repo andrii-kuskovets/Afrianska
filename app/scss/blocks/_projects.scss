@@ -1,0 +1,39 @@
+.projects {
+    padding: 30px 0;
+
+    &__item {
+        position: relative;
+    }
+
+    &__name-el {
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        color: $white;
+        text-align: right;
+
+        &_left {
+            right: auto;
+            left: 0;
+            text-align: left;
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    &__text {
+        font-size: 10px;
+        font-weight: 200;
+        opacity: 0.8;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+}

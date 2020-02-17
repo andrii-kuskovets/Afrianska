@@ -1,0 +1,14 @@
+.header {
+    padding:15px 20px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        position: relative;
+        width: 70%;
+    }
+}

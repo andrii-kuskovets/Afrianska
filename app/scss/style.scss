@@ -1,0 +1,26 @@
+@import 'libs/normalize';
+@import 'libs/fonts';
+@import 'base/variables';
+@import 'blocks/title';
+@import 'blocks/button';
+@import 'blocks/paragraph';
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/hero';
+@import 'blocks/tasks';
+@import 'blocks/projects';
+@import 'blocks/heading';
+
+* {
+    font-family: 'Gilroy', Helvetica, sans-serif;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
