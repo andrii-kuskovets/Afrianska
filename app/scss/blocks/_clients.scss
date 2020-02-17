@@ -21,9 +21,22 @@
         &:nth-last-child(-n+2) {
             border-bottom: none;
         }
+
+        &:hover {
+            background-color: rgba($dark-blue, 0.2);
+        }
     }
 
     &__img, &__link {
         padding: 30px;
+    }
+
+    &__link {
+        a {
+            font-size: 18px;
+            letter-spacing: 0.02em;
+            color: $white;
+            text-decoration: none;
+        }
     }
 }
