@@ -1,0 +1,13 @@
+.hero {
+    padding-bottom: 30px;
+    background: linear-gradient(0deg, rgba($white-blue, .2) 8.84%, rgba($white-blue, 0) 31.12%);
+
+    &__title {
+        font-family: Galien;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: 0.04em;
+        color: $dark-blue;
+        text-align: center;
+    }
+}
