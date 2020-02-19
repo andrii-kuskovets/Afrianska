@@ -29,6 +29,7 @@
 
     &__img, &__link {
         padding: 30px;
+        margin: 0 auto;
     }
 
     &__link {
@@ -38,5 +39,31 @@
             color: $white;
             text-decoration: none;
         }
+    }
+}
+
+@include respond-to('small') {
+    .clients {
+        &__item {
+            width: calc(25% - 1px);
+            justify-content: space-between;
+            border-bottom: none;
+            border-top: 1px solid $white;
+            border-right: 1px solid $white;
+
+            &:nth-child(4n+4) {
+                border-right: none;
+            }
+
+            &:nth-child(-n+4) {
+                border-top: none;
+            }
+        }
+    }
+}
+
+@include respond-to('large') {
+    .clients {
+        padding: 96px 0 125px 0; 
     }
 }
