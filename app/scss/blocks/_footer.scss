@@ -1,11 +1,28 @@
 .footer {
+    position: relative;
     padding: 30px 0;
-    margin-right: 33px;
+    margin-right: 7%;
     background-color: $azure;
     border-top-right-radius: 100px;
 
+    .heading {
+        position: relative;
+        padding-bottom: 60px;
+        
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 85%;
+            border-bottom: 1px solid rgba($color: $white, $alpha: .4);
+        }
+    }
+    
     &__logo {
         display: flex;
+        align-items: center;
+        margin-bottom: 30px;
 
         img {
             max-width: 64px;
@@ -19,6 +36,10 @@
         color: $white;
     }
 
+    &__items {
+        position: relative;
+    }
+
     &__element {
         display: flex;
         align-items: baseline;
@@ -26,6 +47,7 @@
         line-height: 16px;
         letter-spacing: 0.05em;
         color: $white;
+        max-width: 240px;
     }
 
     &__abbreviation {
@@ -74,5 +96,89 @@
                 transform: rotate(180deg);
             }
         }
+    }
+
+    &__law {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        color: $white;
+        opacity: 0.4;
+    }
+}
+
+@include respond-to('medium') {
+    .footer {
+
+        &__list {
+            display: block;
+        }
+
+        &__subtitle {
+            &:after {
+                content: none;
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            margin-bottom: 42px;
+        }
+
+        &__info {
+            width: 50%;
+        }
+
+        &__item {
+            width: 25%;
+        }
+
+        &__name {
+            font-size: 28px;
+            line-height: 46px;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 32px;
+        }
+
+        &__element, &__link {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 16px;
+        }
+
+        &__point {
+            margin-bottom: 15px;
+        }
+
+        .heading {
+            &__wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &__title {
+                text-align: left;
+            }
+
+            .container {
+                width: 940px;
+            }
+
+            .button {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@include respond-to('large') {
+    .footer {
+        padding: 91px 0 64px 0;
+        border-top-right-radius: 200px;
     }
 }

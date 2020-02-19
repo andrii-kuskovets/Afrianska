@@ -67,6 +67,7 @@
 
     &__subtitle {
         margin: 0;
+        margin-bottom: 8px;
         font-size: 18px;
         font-weight: 300;
     }
@@ -79,5 +80,46 @@
 
     &__wrapper {
         display: flex;
+        justify-content: space-between;
+    }
+}
+
+@include respond-to('medium') {
+    .projects {
+        &__name-el {
+            padding: 30px;
+        }
+
+        &__subtitle {
+            font-size: 24px;
+        }
+    
+        &__text {
+            font-size: 14px;
+        }
+    }
+}
+
+@include respond-to('large') {
+    .projects {
+        padding: 0 0 100px 0;
+
+        &__name-el {
+            padding: 48px;
+        }
+
+        &__subtitle {
+            font-size: 28px;
+            line-height: 46px;
+        }
+    
+        &__text {
+            font-size: 16px;
+            line-height: 46px;
+        }
+
+        &__item {
+            margin-bottom: 90px;
+        }
     }
 }

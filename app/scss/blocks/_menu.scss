@@ -70,3 +70,9 @@
         }
     }
 }
+
+@include respond-to('medium') {
+    .hamburger {
+        right: 83px;
+    }
+}

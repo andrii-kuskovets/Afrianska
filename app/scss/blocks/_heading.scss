@@ -8,6 +8,8 @@
         font-weight: 400;
         color: $dark-blue;
         opacity: 0.6;
+        max-width: 540px;
+        margin: 0 auto;
         
         &_white {
             color: $white;
@@ -24,6 +26,29 @@
 
         &_white {
             color: $white;
+        }
+    }
+}
+
+@include respond-to('medium') {
+    .heading {
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+
+        &__title {
+            font-size: 26px;
+            max-width: 314px;
+        }
+    }
+}
+
+@include respond-to('large') {
+    .heading {
+        &__title {
+            font-size: 36px;
+            line-height: 46px;
+            text-align: left;
         }
     }
 }

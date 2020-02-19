@@ -13,3 +13,9 @@
         width: 70%;
     }
 }
+
+@include respond-to('medium') {
+    .header {
+        padding: 48px 83px;
+    }
+}
