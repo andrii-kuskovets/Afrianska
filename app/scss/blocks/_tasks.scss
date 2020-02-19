@@ -1,27 +1,38 @@
 .tasks {
     padding: 30px 0;
     
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__item {
         max-width: 380px;
         margin-bottom: 20px;
-        padding: 48px;
+        padding: 47px;
         box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
         border-radius: 10px;
+        background-color: $white;
+
+        &_margin-top {
+            margin-top: 70px;
+        }
     }
 
     &__img {
         text-align: center;
-        
-            &_absolute {
-            height: 150px;
-            position: relative;
+        margin-bottom: 55px;
 
-            img {
-                position: absolute;
-                top: -70px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
+        img {
+            width: auto;
+            display: inherit;
+            margin: 0 auto;
+        }
+        
+            &_margin-top {
+            margin-top: -70px;
         }
     }
 
@@ -30,6 +41,7 @@
         line-height: 30px;
         letter-spacing: 0.05em;
         color: $dark-blue;
+        margin-bottom: 16px;
     }
 
     &__link {
@@ -49,6 +61,48 @@
             bottom: 0;
             width: 16px;
             height: 16px;
+        }
+    }
+
+    .heading__paragraph {
+        margin-bottom: 32px;
+    }
+}
+
+@include respond-to('large') {
+    .tasks {
+        padding: 192px 0;
+
+        &__items {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .heading__title {
+            max-width: 358px;
+            align-self: flex-start;
+        }
+
+        &__item {
+            width: 50%;
+            margin-bottom: 0;
+
+            &_absolute {
+                position: absolute;
+                left: 80px;
+            }
+
+            &_margin-l {
+                margin-left: auto;
+                margin-top: 50px;
+            }
+
+            &_margin-top {
+                margin-top: 0;
+                margin-bottom: 50px;
+            }
         }
     }
 }

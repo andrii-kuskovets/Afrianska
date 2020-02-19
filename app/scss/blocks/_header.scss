@@ -1,5 +1,6 @@
 .header {
     padding:15px 20px;
+    position: relative;
 
     &__wrapper {
         display: flex;
@@ -10,5 +11,11 @@
     &__nav {
         position: relative;
         width: 70%;
+    }
+}
+
+@include respond-to('medium') {
+    .header {
+        padding: 48px 83px;
     }
 }

@@ -37,7 +37,7 @@
 .hamburger {
     display: block;
     position: absolute;
-    right: 0;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     width: 24px;
@@ -68,5 +68,11 @@
                 transform: translateY(3px) rotate(45deg);
             }
         }
+    }
+}
+
+@include respond-to('medium') {
+    .hamburger {
+        right: 83px;
     }
 }

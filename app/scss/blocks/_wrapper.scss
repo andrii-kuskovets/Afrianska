@@ -1,0 +1,10 @@
+.wrapper {
+    background-color: $light-blue;
+    border-top-left-radius: 100px;
+}
+
+@include respond-to('large') {
+    .wrapper {
+        border-top-left-radius: 200px;
+    }
+}
