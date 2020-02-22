@@ -1,0 +1,29 @@
+.form-search {
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+
+    &__input {
+        width: 100%;
+        padding: 20px 0 17px 72px;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba($color: $dark-blue, $alpha: .6);
+        background: $milk;
+        border-radius: 10px;
+        text-transform: capitalize;
+        border: none;
+    }
+
+    &__button {
+        position: absolute;
+        left: 27px;
+        top: 20px;
+        width: 18px;
+        height: 18px;
+        padding: 0;
+        border: none;
+        background-color: $white;
+        background: url(../icons/search.svg) center (center / cover) no-repeat;
+    }
+}
