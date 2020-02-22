@@ -109,6 +109,9 @@
 
 @include respond-to('medium') {
     .footer {
+        &__items {
+            padding-left: 7%;
+        }
 
         &__list {
             display: block;
@@ -155,6 +158,8 @@
         }
 
         .heading {
+            padding-left: 7%;
+
             &__wrapper {
                 display: flex;
                 justify-content: space-between;
