@@ -1,5 +1,7 @@
 @import 'libs/reset';
 @import 'libs/fonts';
+@import 'libs/slick';
+@import 'libs/slick-theme';
 @import 'base/mixins';
 @import 'base/variables';
 @import 'blocks/button';
@@ -12,6 +14,12 @@
 @import 'blocks/wrapper';
 @import 'blocks/clients';
 @import 'blocks/footer';
+@import 'blocks/introduction';
+@import 'blocks/popular';
+@import 'blocks/form-search';
+@import 'blocks/article';
+@import 'blocks/all-articles';
+@import 'blocks/contacts';
 
 * {
     font-family: 'Gilroy', Helvetica, sans-serif;
@@ -32,12 +40,18 @@
 
 @include respond-to('small') {
     .container {
-        padding:0 20px
+        padding: 0 20px;
     }
 }
 
 @include respond-to('medium') {
     .container {
-        padding:0 30px
+        padding: 0 30px;
+    }
+}
+
+@include respond-to('large') {
+    .container {
+        padding: 0;
     }
 }

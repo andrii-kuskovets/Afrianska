@@ -25,4 +25,10 @@ $(document).ready(function(){
             $(this).toggleClass("footer__subtitle_active");
         }
     });
+
+    $('.all-articles__slider').slick({
+        speed: 1000,
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/prev.svg"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/next.svg"></button>',
+    });
 });
