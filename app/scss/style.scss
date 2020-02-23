@@ -19,6 +19,7 @@
 @import 'blocks/form-search';
 @import 'blocks/article';
 @import 'blocks/all-articles';
+@import 'blocks/contacts';
 
 * {
     font-family: 'Gilroy', Helvetica, sans-serif;
@@ -39,12 +40,18 @@
 
 @include respond-to('small') {
     .container {
-        padding:0 20px
+        padding: 0 20px;
     }
 }
 
 @include respond-to('medium') {
     .container {
-        padding:0 30px
+        padding: 0 30px;
+    }
+}
+
+@include respond-to('large') {
+    .container {
+        padding: 0;
     }
 }

@@ -1,0 +1,212 @@
+.contacts {
+    padding: 30px 0;
+
+    &__wrapper {
+        margin-bottom: 30px; //d-96
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    &__item {
+        margin-bottom: 20px; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 14px; 
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        color: $dark-blue;
+        text-transform: uppercase;
+    }
+
+    &__form {
+        max-width: 540px;
+        padding: 16px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        background: $white;
+        box-shadow: 5px 10px 50px rgba($blue-form, 0.2);
+        border-radius: 10px;
+        
+        span {
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 0.04em;
+            color: rgba($dark-blue, $alpha: .8);
+        }
+
+        input, textarea {
+            margin-bottom: 12px; 
+            border: 1px solid rgba($blue, .4);
+            border-radius: 10px;
+            padding: 10px 16px; 
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 0.04em;
+            color: rgba($dark-blue, $alpha: .2);
+            resize: none;
+
+            &::placeholder {
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: 0.04em;
+                color: rgba($dark-blue, $alpha: .2);
+            }
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    &__text, &__link {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: $dark-blue;
+        text-decoration: none;
+        max-width: 300px;
+    }
+
+    &__link {
+        padding-left: 37px;
+        position: relative;
+        display: block;
+        margin-bottom: 16px;
+        &_telephone {
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                background: url(../icons/phone.svg) center (center / cover) no-repeat;
+                width: 18px;
+                height: 18px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &_web {
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                background: url(../icons/globe.svg) center (center / cover) no-repeat;
+                width: 20px;
+                height: 20px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &_mail {
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                background: url(../icons/letter.svg) center (center / cover) no-repeat;
+                width: 20px;
+                height: 16px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+@include respond-to('small') {
+    .contacts {
+        &__items {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+@include respond-to('medium') {
+    .contacts {
+        padding: 40px 0 66px 0;
+
+        &__wrapper {
+            margin-bottom: 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__items {
+            flex-direction: column;
+        }
+
+        &__data {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__img {
+            margin-bottom: 60px;
+        }
+
+        &__item {
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            margin-bottom: 18px; 
+        }
+
+        &__form {
+            width: 60%;
+            padding: 56px;
+
+            input, textarea {
+                margin-bottom: 32px;
+                padding: 21px 36px;
+            }
+        }
+    }
+}
+
+@include respond-to('large') {
+    .contacts {
+        padding: 60px 0 96px 0;
+
+        &__title {
+            margin-bottom: 24px; 
+        }
+
+        &__item {
+            margin-bottom: 40px;
+        }
+
+        &__img {
+            margin-bottom: 80px;
+        }
+
+        &__wrapper {
+            margin-bottom: 96px;
+        }
+    }
+}
