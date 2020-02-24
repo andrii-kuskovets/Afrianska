@@ -12,6 +12,16 @@
         position: relative;
         width: 70%;
     }
+
+    &_active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        height: 100px;
+        
+    }
 }
 
 @include respond-to('medium') {
