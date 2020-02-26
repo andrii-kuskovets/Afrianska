@@ -1,9 +1,8 @@
 .footer {
     position: relative;
     padding: 30px 0;
-    margin-right: 7%;
     background-color: $azure;
-    border-top-right-radius: 100px;
+    
 
     .heading {
         position: relative;
@@ -27,6 +26,10 @@
         img {
             max-width: 64px;
         }
+    }
+
+    &__info {
+        margin-bottom: 16px;
     }
 
     &__name, &__subtitle {
@@ -66,6 +69,7 @@
     &__list {
         display: none;
         padding-left: 0;
+        margin-bottom: 10px;
 
         li {
             list-style-type: none;
@@ -76,6 +80,7 @@
         position: relative;
         transition: 0.3s all;
         font-size: 16px;
+        margin-bottom: 16px;
         
         &:after {
             content: "";
@@ -106,6 +111,12 @@
         opacity: 0.4;
     }
 }
+@include respond-to('small') {
+    .footer {
+        margin-right: 7%;
+        border-top-right-radius: 100px;
+    }
+}
 
 @include respond-to('medium') {
     .footer {
@@ -118,6 +129,10 @@
         }
 
         &__subtitle {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 32px;
+
             &:after {
                 content: none;
             }
@@ -139,12 +154,6 @@
         &__name {
             font-size: 28px;
             line-height: 46px;
-        }
-
-        &__subtitle {
-            font-size: 20px;
-            line-height: 30px;
-            margin-bottom: 32px;
         }
 
         &__element, &__link {
