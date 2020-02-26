@@ -5,7 +5,6 @@
     left: 0;
     width: 100%;
     z-index: 2;
-    height: 100px;
     
     &__wrapper {
         display: flex;
@@ -19,13 +18,12 @@
     }
 
     &_active {
-        background-color: $white;
-        
+        background-color:rgba($white, .9);
     }
 }
 
 @include respond-to('medium') {
     .header {
-        padding: 48px 83px;
+        padding: 56px 60px 20px 60px;
     }
 }

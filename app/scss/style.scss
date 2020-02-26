@@ -22,7 +22,6 @@
 @import 'blocks/contacts';
 
 * {
-    font-family: 'Gilroy', Helvetica, sans-serif;
     box-sizing: border-box;
 
     img {
@@ -30,6 +29,10 @@
         width: 100%;
         display: block;
     }
+}
+
+body {
+    font-family: 'Gilroy', Helvetica, sans-serif;
 }
 
 .container {

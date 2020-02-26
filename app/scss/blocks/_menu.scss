@@ -32,17 +32,18 @@
         line-height: 26px;
         text-transform: uppercase;
         text-decoration: none;
+
+        &:hover {
+            color: $dark-blue;
+        }
     }
 }
 
 .hamburger {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
     width: 24px;
     height: 16px;
+    cursor: pointer;
 
     span {
         display: block;
@@ -74,6 +75,43 @@
 
 @include respond-to('medium') {
     .hamburger {
-        right: 83px;
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-end;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        padding: 0;
+        background-color: unset;
+        
+    
+        
+        &__item {
+            margin: 0;
+        }
+        
+        li+li {
+            margin-left: 50px;
+        }
+    
+        &__link {
+            font-size: $large;
+            color: $blue;
+            font-weight: 500;
+
+            &:hover {
+                border-bottom: 1px solid $dark-blue;
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@
         flex-direction: column;
 
         .article__title {
-            font-size: 22px;
+            font-size: $large;
             line-height: 26px;
             margin-bottom: 15px;
         }
@@ -23,6 +23,7 @@
 
         .article__img {
             width: 100%;
+            margin-bottom: 20px;
         }
 
         .article__descr {
@@ -45,7 +46,7 @@
 
     &__title {
         font-family: 'Galien', serif;
-        font-size: 16px;
+        font-size: $standart;
         line-height: 20px;
         letter-spacing: 0.04em;
         color: $dark-blue;
@@ -55,7 +56,7 @@
     &__paragraph {
         display: none;
         margin-bottom: 14px;
-        font-size: 16px;
+        font-size: $standart;
         line-height: 26px;
         letter-spacing: 0.04em;
         color: $black;
@@ -73,15 +74,16 @@
 
     &__author {
         display: block;
-        font-size: 12px;
+        font-size: $extra-small;
         line-height: 20px;
         letter-spacing: 0.04em;
         color: $dark-blue;
+        margin-bottom: 4px;
     }
 
     &__date {
         display: block;
-        font-size: 12px;
+        font-size: $extra-small;
         line-height: 20px;
         letter-spacing: 0.04em;
         color: rgba($black, .4);
@@ -95,16 +97,26 @@
 
     &__bookmark {
         display: block;
-        width: 18px;
-        height: 22px;
+        width: 12px;
+        height: 16px;
         background: url(../icons/bookmark.svg) center (center / cover) no-repeat;
+        transition: transform .2s;
+
+        &:hover {
+            transform: scale(1.5); 
+        }
     }
 
     &__share {
         display: block;
-        width: 18px;
-        height: 20px;
+        width: 12px;
+        height: 14px;
         background: url(../icons/share.svg) center (center / cover) no-repeat;
+        transition: transform .2s;
+
+        &:hover {
+            transform: scale(1.5); 
+        }
     }
 }
 
@@ -114,7 +126,7 @@
         margin-bottom: 35px;
 
         &__title {
-            font-size: 20px;
+            font-size: $large;
             line-height: 30px;
         }
 
@@ -173,7 +185,7 @@
 
 
         &__title {
-            font-size: 22px;
+            font-size: $large;
             line-height: 40px;
         }
 
@@ -188,16 +200,32 @@
             .article__descr {
                 margin-right: 20px;
                 width: 40%;
+                justify-content: center;
             }
 
             .article__title {
                 font-size: 38px;
                 line-height: 48px;
+                margin-bottom: 50px;
             }
 
             .article__img {
                 width: 60%;
             }
+
+            .article__paragraph {
+                margin-bottom: 40px;
+            }
+        }
+
+        &__bookmark {
+            width: 18px;
+            height: 22px;
+        }
+    
+        &__share {
+            width: 18px;
+            height: 20px;
         }
     }
 }
@@ -207,7 +235,7 @@
         margin-bottom: 50px;
 
         &__title {
-            font-size: 24px;
+            font-size: $xx-large;
             line-height: 38px;
         }
 
