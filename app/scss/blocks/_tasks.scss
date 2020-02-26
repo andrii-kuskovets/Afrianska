@@ -68,6 +68,25 @@
         margin-bottom: 32px;
     }
 }
+// @include respond-to('small') {
+//     .tasks {
+//         &__items {
+//             flex-direction: row;
+//             flex-wrap: wrap;
+//             justify-content: space-around;
+
+//             .heading__title {
+//                 width: 100%;
+//             }
+//         }
+
+//         &__item {
+//             &_margin-top {
+//                 margin-top: 0;
+//             }
+//         }
+//     }
+// }
 
 @include respond-to('large') {
     .tasks {
