@@ -15,13 +15,20 @@ $(document).ready(function(){
 
     $('.all-articles__slider').slick({
         speed: 1000,
-        prevArrow: '<button type="button" class="slick-prev"><img src="icons/prev.svg"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="icons/next.svg"></button>',
+        arrows: false
     });
+
+    $('.left').click(function(){
+        $('.all-articles__slider').slick('slickPrev');
+    })
+    
+    $('.right').click(function(){
+        $('.all-articles__slider').slick('slickNext');
+    })
 });
 
-$(window).bind('scroll', function () {
-    if ($(window).scrollTop() >= 300) {
+$(window).on('scroll', function () {
+    if ($(window).scrollTop()) {
         $('.header').addClass('header_active');
     } else {
         $('.header').removeClass('header_active');

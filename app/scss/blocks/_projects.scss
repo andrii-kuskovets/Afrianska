@@ -45,6 +45,12 @@
                 z-index: 1;
             }
         }
+
+        &:hover {
+            &:after {
+                background: none;
+            }
+        }
     }
 
     &__name-el {
@@ -68,7 +74,7 @@
     &__subtitle {
         margin: 0;
         margin-bottom: 8px;
-        font-size: 18px;
+        font-size: $medium;
         font-weight: 300;
     }
 
@@ -91,11 +97,11 @@
         }
 
         &__subtitle {
-            font-size: 24px;
+            font-size: $xx-large;
         }
     
         &__text {
-            font-size: 14px;
+            font-size: $small;
         }
     }
 }
@@ -114,7 +120,7 @@
         }
     
         &__text {
-            font-size: 16px;
+            font-size: $standart;
             line-height: 46px;
         }
 

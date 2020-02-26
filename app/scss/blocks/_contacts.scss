@@ -29,7 +29,7 @@
 
     &__title {
         margin-bottom: 14px; 
-        font-size: 20px;
+        font-size: $large;
         line-height: 30px;
         letter-spacing: 0.04em;
         color: $dark-blue;
@@ -47,10 +47,11 @@
         border-radius: 10px;
         
         label {
-            font-size: 16px;
+            font-size: $standart;
             line-height: 30px;
             letter-spacing: 0.04em;
             color: rgba($dark-blue, $alpha: .8);
+            margin-bottom: 8px;
         }
 
         input, textarea {
@@ -58,14 +59,14 @@
             border: 1px solid rgba($blue, .4);
             border-radius: 10px;
             padding: 10px 16px; 
-            font-size: 16px;
+            font-size: $standart;
             line-height: 30px;
             letter-spacing: 0.04em;
             color: rgba($dark-blue, $alpha: .2);
             resize: none;
 
             &::placeholder {
-                font-size: 16px;
+                font-size: $standart;
                 line-height: 30px;
                 letter-spacing: 0.04em;
                 color: rgba($dark-blue, $alpha: .2);
@@ -78,7 +79,7 @@
     }
 
     &__text, &__link {
-        font-size: 16px;
+        font-size: $standart;
         line-height: 26px;
         letter-spacing: 0.04em;
         color: $dark-blue;
@@ -91,7 +92,12 @@
         position: relative;
         display: block;
         margin-bottom: 16px;
-        &_telephone {
+
+        &:hover {
+            font-weight: 700;
+        }
+
+        &_telephone, &_web, &_mail {
             &:before {
                 content: "";
                 position: absolute;
@@ -107,29 +113,17 @@
 
         &_web {
             &:before {
-                content: "";
-                position: absolute;
-                display: block;
                 background: url(../icons/globe.svg) center (center / cover) no-repeat;
                 width: 20px;
                 height: 20px;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
             }
         }
 
         &_mail {
             &:before {
-                content: "";
-                position: absolute;
-                display: block;
                 background: url(../icons/letter.svg) center (center / cover) no-repeat;
                 width: 20px;
                 height: 16px;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
             }
         }
     }

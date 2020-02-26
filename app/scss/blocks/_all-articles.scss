@@ -1,8 +1,9 @@
 .all-articles {
     padding-bottom: 40px;
+    position: relative;
 
     &__title {
-        font-size: 18px;
+        font-size: $medium;
         line-height: 23px;
         letter-spacing: 0.04em;
         color: rgba($blue, .8);
@@ -11,44 +12,44 @@
 
     &__slider {
         padding-bottom: 56px;
+    }
 
-        .slick-next {
-            right: 0;
-            top: auto;
-            bottom: 0;
-            z-index: 1;
+    .arrows {
+        display: flex;
+        justify-content: space-between;
 
-            &:before {
-                content: "Old Post";
-                display: block;
-                position: absolute;
-                font-size: 16px;
+        .right, .left {
+            display: flex;
+            align-items: center;
+            
+            span {
+                font-size: $standart;
                 font-family: 'Gilroy', Helvetica, sans-serif;
                 line-height: 20px;
                 letter-spacing: 0.04em;
                 font-weight: 500;
-                color: blue;
-                left: -85px;
+                color: $blue;
+
+                &:hover {
+                    font-weight: 900;
+                }
+            }
+    
+            img {
+                width: 12px;
+                height: 12px;
             }
         }
-        
-        .slick-prev {
-            left: 0;
-            top: auto;
-            bottom: 0;
-            z-index: 1;
 
-            &:before {
-                content: "New Post";
-                display: block;
-                font-family: 'Gilroy', Helvetica, sans-serif;
-                position: absolute;
-                font-size: 16px;
-                line-height: 20px;
-                font-weight: 500;
-                letter-spacing: 0.04em;
-                color: blue;
-                right: -85px;
+        .right {
+            span {
+                margin-right: 19px;
+            }
+        }
+
+        .left {
+            span {
+                margin-left: 19px;
             }
         }
     }
@@ -65,7 +66,7 @@
         padding-bottom: 75px;
 
         &__title {
-            font-size: 20px;
+            font-size: $large;
             line-height: 25px;
         }
     }
